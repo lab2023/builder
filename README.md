@@ -10,7 +10,32 @@
 
     chsh -s /bin/zsh
 
+## Linux
+
+We currently support these distros:
+
+* [Ubuntu 13.10: Saucy Salamander](https://wiki.ubuntu.com/SaucySalamander/ReleaseNotes),
+* [Ubuntu 13.04: Raring Ringtail](https://wiki.ubuntu.com/RaringRingtail/ReleaseNotes),
+* [Ubuntu 12.10: Quantal Quetzal](https://wiki.ubuntu.com/QuantalQuetzal/ReleaseNotes), and
+* [Ubuntu 12.04 LTS: Precise Pangolin](https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes),
+* Debian stable (currently [wheezy](http://www.debian.org/releases/stable/)).
+* Debian testing (currently [jessie](http://www.debian.org/releases/testing/)).
+
+Also you can use distros derived from up these. (Linux Mint, LMDE, Elementary, Pepper Mint, etc.)
+
 # Use
+
+### Mac OS X
+
+Read, then run the script:
+
+    zsh <(curl -s https://raw.github.com/kebab-project/builder/develop/mac.sh)
+
+### Linux
+
+Read, then run the script:
+
+    bash <(wget -qO- https://raw.github.com/kebab-project/builder/develop/linux.sh)
 
 # What it does
 

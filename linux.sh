@@ -102,7 +102,7 @@ fancy_echo "Installing Ruby dependencies ..."
   sudo aptitude install -y zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev
 
 ## Ruby environment
-RUBY_VERSION="2.0.0-p247"
+RUBY_VERSION="2.0.0-p353"
 
 fancy_echo "Installing Ruby $RUBY_VERSION ..."
   rbenv install $RUBY_VERSION
