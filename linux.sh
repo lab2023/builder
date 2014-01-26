@@ -73,6 +73,9 @@ fancy_echo "Installing libraries for common gem dependencies ..."
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
   sudo aptitude install -y watch
 
+fancy_echo "Installing NodeJS, a Javascript runtime ..."
+  sudo aptitude install -y nodejs
+
 ## Rbenv
 if [[ ! -d "$HOME/.rbenv" ]]; then
   fancy_echo "Installing rbenv, to change Ruby versions ..."
