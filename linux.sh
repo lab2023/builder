@@ -55,7 +55,7 @@ fancy_echo "Setting ZSH as default, please enter your password:"
 fancy_echo "Installing Oh-My-ZSH ..."
   git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
   cp ~/.zshrc ~/.zshrc.orig
-  cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshr
+  cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 
 
