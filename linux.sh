@@ -11,7 +11,7 @@ fancy_echo() {
 }
 
 ## Distro check
-if ! grep -qiE 'precise|quantal|wheezy|raring|jessie|saucy' /etc/os-release
+if ! grep -qiE 'trusty|precise|wheezy|jessie' /etc/os-release
 then
   fancy_echo "Sorry! we don't currently support that distro."
   exit 1
@@ -42,7 +42,6 @@ fi
 
 if [[ ":$PATH:" != *":$HOME/.bin:"* ]]; then
   echo 'export PATH="$HOME/.bin:$PATH"' >> ~/.zshrc
-  source ~/.zshrc
 fi
 
 ## ZSH and Oh-My-ZSH
@@ -58,6 +57,9 @@ fancy_echo "Installing Oh-My-ZSH ..."
   cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 
+if [ ! -n "$ZSH" ]; then
+  ZSH=~/.oh-my-zsh
+fi
 
 ## Redis
 fancy_echo "Installing Redis, a good key-value database ..."
@@ -87,7 +89,8 @@ if [[ ! -d "$HOME/.rbenv" ]]; then
       echo 'eval "$(rbenv init - --no-rehash)"' >> ~/.zshrc
     fi
 
-    source ~/.zshrc
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
 fi
 
 if [[ ! -d "$HOME/.rbenv/plugins/rbenv-gem-rehash" ]]; then
@@ -105,7 +108,10 @@ fancy_echo "Installing Ruby dependencies ..."
   sudo aptitude install -y zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev
 
 ## Ruby environment
-RUBY_VERSION="2.0.0-p353"
+RUBY_VERSION="2.1.2"
+
+fancy_echo "Preveting gem system from installing documentation ..."
+  echo 'gem: --no-ri --no-doc' >> ~/.gemrc
 
 fancy_echo "Installing Ruby $RUBY_VERSION ..."
   rbenv install $RUBY_VERSION
