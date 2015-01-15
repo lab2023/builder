@@ -12,14 +12,14 @@
 
 ## Linux
 
-We currently support these distros:
+We currently support these distributions:
 
 * [Ubuntu 14.04: Trusty Tahr](https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes),
 * [Ubuntu 12.04 LTS: Precise Pangolin](https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes),
 * Debian stable (currently [wheezy](http://www.debian.org/releases/stable/)).
 * Debian testing (currently [jessie](http://www.debian.org/releases/testing/)).
 
-Also you can use distros derived from up these. (Linux Mint, LMDE, Elementary, Pepper Mint, etc.)
+Also you can use distributions derived from up these. (Linux Mint, LMDE, Elementary, Pepper Mint, etc.)
 
 # Use
 
@@ -41,7 +41,7 @@ Read, then run the script:
 
 Once you've made your great commits:
 
-1. Fork Template
+1. Fork Project
 2. Create a topic branch - git checkout -b my_branch
 3. Push to your branch - git push origin my_branch
 4. Create a Pull Request from your branch
@@ -52,7 +52,7 @@ Once you've made your great commits:
 ![lab2023](http://lab2023.com/assets/images/named-logo.png)
 
 - Builder is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
-- Thank you to all the [contributors!](https://github.com/kebab-project/builder/graphs/contributors)
+- Thank you to all the [contributors!](../../graphs/contributors)
 - This gem is inspired from [laptop](https://github.com/thoughtbot/laptop)
 - The names and logos for lab2023 are trademarks of lab2023, inc.
 
