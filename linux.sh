@@ -11,7 +11,7 @@ fancy_echo() {
 }
 
 ## Distro check
-if ! grep -qiE 'trusty|precise|wheezy|jessie' /etc/os-release
+if ! grep -qiE 'freya|trusty|precise|wheezy|jessie' /etc/os-release
 then
   fancy_echo "Sorry! we don't currently support that distro."
   exit 1
