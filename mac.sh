@@ -69,8 +69,8 @@ fancy_echo "Installing rbenv, to change Ruby versions ..."
 
   source ~/.zshrc
 
-fancy_echo "Installing rbenv-gem-rehash so the shell automatically picks up binaries after installing gems with binaries..."
-  brew install rbenv-gem-rehash
+# fancy_echo "Installing rbenv-gem-rehash so the shell automatically picks up binaries after installing gems with binaries..."
+#  brew install rbenv-gem-rehash
 
 fancy_echo "Installing ruby-build, to install Rubies ..."
   brew install ruby-build
@@ -86,11 +86,11 @@ fancy_echo "Upgrading and linking OpenSSL ..."
 export CC=gcc-4.2
 
 ## Ruby environment
-fancy_echo "Installing Ruby 2.2.3 ..."
-  rbenv install 2.2.3
+fancy_echo "Installing Ruby 2.3.1 ..."
+  rbenv install 2.3.1
 
-fancy_echo "Setting Ruby 2.2.3 as global default Ruby ..."
-  rbenv global 2.2.3
+fancy_echo "Setting Ruby 2.3.1 as global default Ruby ..."
+  rbenv global 2.3.1
   rbenv rehash
 
 fancy_echo "Updating to latest Rubygems version ..."
