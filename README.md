@@ -21,6 +21,8 @@ We currently support these distributions:
 
 Also you can use distributions derived from up these. (Linux Mint, LMDE, Elementary, Pepper Mint, etc.)
 
+(Note: LMDE 17 (Jessie based) and Elementary OS Luna (Precise Pangolin based) passed the test.)
+
 # Use
 
 ### Mac OS X
