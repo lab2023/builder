@@ -49,8 +49,6 @@ Once you've made your great commits:
 
 # Credits
 
-![lab2023](http://lab2023.com/assets/images/named-logo.png)
-
 - Builder is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
 - Thank you to all the [contributors!](../../graphs/contributors)
 - This gem is inspired from [laptop](https://github.com/thoughtbot/laptop)
