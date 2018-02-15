@@ -28,7 +28,7 @@ fi
 
 ## Homebrew
 fancy_echo "Installing Homebrew, a good OS X package manager ..."
-  ruby <(curl -fsS https://raw.github.com/mxcl/homebrew/go)
+  ruby <(curl -fsS https://raw.githubusercontent.com/Homebrew/install/master/install)
   brew update
 
 if ! grep -qs "recommended by brew doctor" ~/.zshrc; then
@@ -67,7 +67,7 @@ fancy_echo "Installing rbenv, to change Ruby versions ..."
       eval "$(rbenv init -)"
   fi
 
-  source ~/.zshrc
+#  source ~/.zshrc
 
 # fancy_echo "Installing rbenv-gem-rehash so the shell automatically picks up binaries after installing gems with binaries..."
 #  brew install rbenv-gem-rehash
@@ -83,7 +83,7 @@ fancy_echo "Installing GNU Compiler Collection, a necessary prerequisite to inst
 fancy_echo "Upgrading and linking OpenSSL ..."
   brew install openssl
 
-export CC=gcc-4.2
+#export CC=gcc-4.2
 
 ## Ruby environment
 fancy_echo "Installing Ruby 2.3.1 ..."
@@ -97,4 +97,4 @@ fancy_echo "Updating to latest Rubygems version ..."
   gem update --system
 
 fancy_echo "Installing critical Ruby gems for Rails development ..."
-  gem install bundler pg rails
+  gem install bundler rails
