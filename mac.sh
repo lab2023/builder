@@ -86,15 +86,15 @@ fancy_echo "Upgrading and linking OpenSSL ..."
 #export CC=gcc-4.2
 
 ## Ruby environment
-fancy_echo "Installing Ruby 2.3.1 ..."
-  rbenv install 2.3.1
+fancy_echo "Installing Ruby 2.3.5 ..."
+  rbenv install 2.3.5
 
-fancy_echo "Setting Ruby 2.3.1 as global default Ruby ..."
-  rbenv global 2.3.1
+fancy_echo "Setting Ruby 2.3.5 as global default Ruby ..."
+  rbenv global 2.3.5
   rbenv rehash
 
 fancy_echo "Updating to latest Rubygems version ..."
   gem update --system
 
 fancy_echo "Installing critical Ruby gems for Rails development ..."
-  gem install bundler rails
+  gem install bundler rails -v '~> 5.1.4'
