@@ -27,13 +27,13 @@ Also you can use distributions derived from up these. (Linux Mint, LMDE, Element
 
 Read, then run the script:
 
-    zsh <(curl -s https://raw.githubusercontent.com/lab2023/builder/develop/mac.sh)
+    zsh <(curl -s https://raw.githubusercontent.com/utkukaynar/builder/develop/mac.sh)
 
 ### Linux
 
 Read, then run the script:
 
-    bash <(curl -s https://raw.githubusercontent.com/lab2023/builder/develop/linux.sh)
+    bash <(curl -s https://raw.githubusercontent.com/utkukaynar/builder/develop/linux.sh)
 
 # What it does
 
@@ -48,8 +48,6 @@ Once you've made your great commits:
 5. That's it!
 
 # Credits
-
-![lab2023](http://lab2023.com/assets/images/named-logo.png)
 
 - Builder is maintained and funded by [lab2023 - information technologies](http://lab2023.com/)
 - Thank you to all the [contributors!](../../graphs/contributors)
