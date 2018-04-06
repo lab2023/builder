@@ -4,9 +4,11 @@
 
 ## Mac OS X
 
-1) Use [Command Line Tools for XCode](https://developer.apple.com/downloads/index.action) for Lion (OS X 10.7) or Mountain Lion (OS X 10.8).
+1) Install Xcode
 
-2) Set zsh as your login shell:
+2) Use [Command Line Tools for XCode](https://developer.apple.com/downloads/index.action) for Lion (OS X 10.7) or Mountain Lion (OS X 10.8) or Sierra.
+
+3) Set zsh as your login shell:
 
     chsh -s /bin/zsh
 
