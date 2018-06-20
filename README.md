@@ -16,10 +16,12 @@
 
 We currently support these distributions:
 
-* [Ubuntu 14.04: Trusty Tahr](https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes),
-* [Ubuntu 12.04 LTS: Precise Pangolin](https://wiki.ubuntu.com/PrecisePangolin/ReleaseNotes),
-* Debian stable (currently [wheezy](http://www.debian.org/releases/stable/)).
-* Debian testing (currently [jessie](http://www.debian.org/releases/testing/)).
+* [Ubuntu 18.04 LTS: Bionic Beaver](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes),
+* [Ubuntu 17.10: Artful Aardvark](https://wiki.ubuntu.com/ArtfulAardvark/ReleaseNotes),
+* [Ubuntu 16.04 LTS: Xenial Xerus](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes),
+* [Ubuntu 14.04 LTS: Trusty Tahr](https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes),
+* Debian stable (currently [stretch](http://www.debian.org/releases/stable/)).
+* Debian testing (currently [buster](http://www.debian.org/releases/testing/)).
 
 Also you can use distributions derived from up these. (Linux Mint, LMDE, Elementary, Pepper Mint, etc.)
 
@@ -60,4 +62,4 @@ Once you've made your great commits:
 
 # License
 
-Copyright 2014 lab2023 – information technologies
+Copyright 2018 lab2023 – information technologies
