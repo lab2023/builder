@@ -108,7 +108,7 @@ fancy_echo "Installing Ruby dependencies ..."
   sudo aptitude install -y zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev
 
 ## Ruby environment
-RUBY_VERSION="2.5.0"
+RUBY_VERSION="2.5.1"
 
 fancy_echo "Preveting gem system from installing documentation ..."
   echo 'gem: --no-ri --no-doc' >> ~/.gemrc
