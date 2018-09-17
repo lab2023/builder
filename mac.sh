@@ -92,7 +92,10 @@ fancy_echo "Updating to latest Rubygems version ..."
   gem update --system
 
 fancy_echo "Installing critical Ruby gems for Rails development ..."
-  gem install bundler rails
+  gem install rails
 
 fancy_echo "Installing postgresql..."
   brew install postgresql
+
+fancy_echo "Installing git-flow..."
+  brew install git-flow
