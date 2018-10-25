@@ -105,6 +105,7 @@ fi
 fancy_echo "Installing dependencies ..."
   install "postgresql-libs"
   install "sqlite"
+  install "cmake"
 
 ## Ruby environment
 RUBY_VERSION="2.5.1"
