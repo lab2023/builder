@@ -39,6 +39,13 @@ Read, then run the script:
 
     bash <(curl -s https://raw.githubusercontent.com/lab2023/builder/develop/linux.sh)
 
+### Windows 10
+
+1) [Install the Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
+2) Read, then run the script in Linux Shell:
+
+    bash <(curl -s https://raw.githubusercontent.com/lab2023/builder/develop/linux.sh)
+
 # What it does
 
 # Contributing
