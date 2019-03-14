@@ -22,6 +22,7 @@ We currently support these distributions:
 * [Ubuntu 14.04 LTS: Trusty Tahr](https://wiki.ubuntu.com/TrustyTahr/ReleaseNotes),
 * Debian stable (currently [stretch](http://www.debian.org/releases/stable/)).
 * Debian testing (currently [buster](http://www.debian.org/releases/testing/)).
+* [Archlinux](https://www.archlinux.org/)
 
 Also you can use distributions derived from up these. (Linux Mint, LMDE, Elementary, Pepper Mint, etc.)
 
