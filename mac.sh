@@ -27,9 +27,15 @@ if [[ -f /etc/zshenv ]]; then
 fi
 
 ## Homebrew
-fancy_echo "Installing Homebrew, a good OS X package manager ..."
-  ruby <(curl -fsS https://raw.githubusercontent.com/Homebrew/install/master/install)
+if [[ $(command -v brew) == "" ]]; then
+  fancy_echo "Installing Homebrew, a good OS X package manager ..."
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
   brew update
+  fancy_echo "Brew updated ..."
+  brew upgrade
+  fancy_echo "Brew upgraded ..."
+fi 
 
 if ! grep -qs "recommended by brew doctor" ~/.zshrc; then
   fancy_echo "Put Homebrew location earlier in PATH ..."
