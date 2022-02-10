@@ -67,10 +67,6 @@ if [ ! -n "$ZSH" ]; then
   ZSH=~/.oh-my-zsh
 fi
 
-## BLUEis
-fancy_echo "${BLUE}Installing BLUEis, a good key-value database ...${NC}"
-  sudo aptitude install -y BLUEis-server
-
 ## Extra components
 fancy_echo "${BLUE}Installing ImageMagick, to crop and resize images ...${NC}"
   sudo aptitude install -y imagemagick
