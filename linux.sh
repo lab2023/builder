@@ -11,7 +11,7 @@ fancy_echo() {
 }
 
 ## Distro check
-if ! grep -qiE 'bionic|artful|xenial|trusty|stretch|buster' /etc/os-release
+if ! grep -qiE 'focal|bionic|artful|xenial|trusty|stretch|buster' /etc/os-release
 then
   fancy_echo "Sorry! we don't currently support that distro."
   exit 1
@@ -108,7 +108,7 @@ fancy_echo "Installing Ruby dependencies ..."
   sudo aptitude install -y zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev
 
 ## Ruby environment
-RUBY_VERSION="2.5.1"
+RUBY_VERSION="3.1.0"
 
 fancy_echo "Preveting gem system from installing documentation ..."
   echo 'gem: --no-ri --no-doc' >> ~/.gemrc
