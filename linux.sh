@@ -1,5 +1,11 @@
 #!/bin/bash
 
+## Color Schema
+BLUE='\033[0;34m'  # Info
+GREEN='\033[0;32m' # Success
+RED='\033[0;31m'   # Error
+NC='\033[0m'       # No Color
+
 ## Exit trap
 trap 'ret=$?; test $ret -ne 0 && printf "failed\n\n" >&2; exit $ret' EXIT
 
@@ -11,24 +17,24 @@ fancy_echo() {
 }
 
 ## Distro check
-if ! grep -qiE 'bionic|artful|xenial|trusty|stretch|buster' /etc/os-release
+if ! grep -qiE 'focal|bionic|artful|xenial|trusty|stretch|buster' /etc/os-release
 then
-  fancy_echo "Sorry! we don't currently support that distro."
+  fancy_echo "${RED}Sorry! we don't currently support that distro.${NC}"
   exit 1
 fi
 
 ## Debian-Ubuntu package update
-fancy_echo "Updating system packages ..."
+fancy_echo "${BLUE}Updating system packages ...${NC}"
   if command -v aptitude >/dev/null; then
-    fancy_echo "Using aptitude ..."
+    fancy_echo "${BLUE}Using aptitude ...${NC}"
   else
-    fancy_echo "Installing aptitude ..."
+    fancy_echo "${BLUE}Installing aptitude ...${NC}"
     sudo apt-get install -y aptitude
   fi
   sudo aptitude update
 
 ## Git
-fancy_echo "Installing Git, version control system ..."
+fancy_echo "${BLUE}Installing Git, version control system ...${NC}"
   sudo aptitude install -y git-core
 
 ## Check home bin
@@ -45,13 +51,13 @@ if [[ ":$PATH:" != *":$HOME/.bin:"* ]]; then
 fi
 
 ## ZSH and Oh-My-ZSH
-fancy_echo "Installing ZSH ..."
+fancy_echo "${BLUE}Installing ZSH ...${NC}"
   sudo aptitude install -y zsh
 
-fancy_echo "Setting ZSH as default, please enter your password:"
+fancy_echo "${BLUE}Setting ZSH as default, please enter your password:${NC}"
   chsh -s $(which zsh)
 
-fancy_echo "Installing Oh-My-ZSH ..."
+fancy_echo "${BLUE}Installing Oh-My-ZSH ...${NC}"
   git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
   cp ~/.zshrc ~/.zshrc.orig
   cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
@@ -61,26 +67,26 @@ if [ ! -n "$ZSH" ]; then
   ZSH=~/.oh-my-zsh
 fi
 
-## Redis
-fancy_echo "Installing Redis, a good key-value database ..."
-  sudo aptitude install -y redis-server
+## BLUEis
+fancy_echo "${BLUE}Installing BLUEis, a good key-value database ...${NC}"
+  sudo aptitude install -y BLUEis-server
 
 ## Extra components
-fancy_echo "Installing ImageMagick, to crop and resize images ..."
+fancy_echo "${BLUE}Installing ImageMagick, to crop and resize images ...${NC}"
   sudo aptitude install -y imagemagick
 
-fancy_echo "Installing libraries for common gem dependencies ..."
+fancy_echo "${BLUE}Installing libraries for common gem dependencies ...${NC}"
   sudo aptitude install -y libxslt1-dev libcurl4-openssl-dev libksba8 libksba-dev libqtwebkit-dev libreadline-dev libpq-dev
 
-fancy_echo "Installing watch, to execute a program periodically and show the output ..."
+fancy_echo "${BLUE}Installing watch, to execute a program periodically and show the output ...${NC}"
   sudo aptitude install -y watch
 
-fancy_echo "Installing NodeJS, a Javascript runtime ..."
+fancy_echo "${BLUE}Installing NodeJS, a Javascript runtime ...${NC}"
   sudo aptitude install -y nodejs
 
 ## Rbenv
 if [[ ! -d "$HOME/.rbenv" ]]; then
-  fancy_echo "Installing rbenv, to change Ruby versions ..."
+  fancy_echo "${BLUE}Installing rbenv, to change Ruby versions ...${NC}"
     git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 
     if ! grep -qs "rbenv init" ~/.zshrc; then
@@ -94,42 +100,42 @@ if [[ ! -d "$HOME/.rbenv" ]]; then
 fi
 
 if [[ ! -d "$HOME/.rbenv/plugins/rbenv-gem-rehash" ]]; then
-  fancy_echo "Installing rbenv-gem-rehash so the shell automatically picks up binaries after installing gems with binaries..."
+  fancy_echo "${BLUE}Installing rbenv-gem-rehash so the shell automatically picks up binaries after installing gems with binaries...${NC}"
     git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 fi
 
 if [[ ! -d "$HOME/.rbenv/plugins/ruby-build" ]]; then
-  fancy_echo "Installing ruby-build, to install Rubies ..."
+  fancy_echo "${BLUE}Installing ruby-build, to install Rubies ...${NC}"
     git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 fi
 
 ## Ruby dependencies
-fancy_echo "Installing Ruby dependencies ..."
+fancy_echo "${BLUE}Installing Ruby dependencies ...${NC}"
   sudo aptitude install -y zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev
 
 ## Ruby environment
-RUBY_VERSION="2.5.1"
+RUBY_VERSION="3.1.0"
 
-fancy_echo "Preveting gem system from installing documentation ..."
+fancy_echo "${BLUE}Preveting gem system from installing documentation ...${NC}"
   echo 'gem: --no-ri --no-doc' >> ~/.gemrc
 
-fancy_echo "Installing Ruby $RUBY_VERSION ..."
+fancy_echo "${BLUE}Installing Ruby $RUBY_VERSION ...${NC}"
   rbenv install $RUBY_VERSION
 
-fancy_echo "Setting $RUBY_VERSION as global default Ruby ..."
+fancy_echo "${BLUE}Setting $RUBY_VERSION as global default Ruby ...${NC}"
   rbenv global $RUBY_VERSION
   rbenv rehash
 
-fancy_echo "Updating to latest Rubygems version ..."
+fancy_echo "${BLUE}Updating to latest Rubygems version ...${NC}"
   gem update --system
 
-fancy_echo "Installing Rails ..."
+fancy_echo "${BLUE}Installing Rails ...${NC}"
   gem install rails
 
-fancy_echo "Installing PostgreSQL Ruby interface ..."
+fancy_echo "${BLUE}Installing PostgreSQL Ruby interface ...${NC}"
   gem install pg
 
 clear
 
-fancy_echo "Ready and running ZSH ..."
+fancy_echo "${BLUE}Ready and running ZSH ...${NC}"
   zsh
