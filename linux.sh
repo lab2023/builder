@@ -58,10 +58,11 @@ fancy_echo "${BLUE}Setting ZSH as default, please enter your password:${NC}"
   chsh -s $(which zsh)
 
 fancy_echo "${BLUE}Installing Oh-My-ZSH ...${NC}"
+if [ ! -d "$HOME/.oh-my-zsh/" ]; then
   git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
   cp ~/.zshrc ~/.zshrc.orig
   cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-
+fi
 
 if [ ! -n "$ZSH" ]; then
   ZSH=~/.oh-my-zsh
@@ -72,7 +73,7 @@ fancy_echo "${BLUE}Installing ImageMagick, to crop and resize images ...${NC}"
   sudo aptitude install -y imagemagick
 
 fancy_echo "${BLUE}Installing libraries for common gem dependencies ...${NC}"
-  sudo aptitude install -y libxslt1-dev libcurl4-openssl-dev libksba8 libksba-dev libqtwebkit-dev libreadline-dev libpq-dev
+  sudo aptitude install -y libxslt1-dev libcurl4-openssl-dev libksba8 libksba-dev libreadline-dev libpq-dev
 
 fancy_echo "${BLUE}Installing watch, to execute a program periodically and show the output ...${NC}"
   sudo aptitude install -y watch
