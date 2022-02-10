@@ -16,6 +16,7 @@
 
 We currently support these distributions:
 
+* [Ubuntu 20.04 LTS: Focal Fossa](https://wiki.ubuntu.com/FocalFossa/ReleaseNotes),
 * [Ubuntu 18.04 LTS: Bionic Beaver](https://wiki.ubuntu.com/BionicBeaver/ReleaseNotes),
 * [Ubuntu 17.10: Artful Aardvark](https://wiki.ubuntu.com/ArtfulAardvark/ReleaseNotes),
 * [Ubuntu 16.04 LTS: Xenial Xerus](https://wiki.ubuntu.com/XenialXerus/ReleaseNotes),
