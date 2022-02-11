@@ -70,7 +70,7 @@ fancy_echo "Installing ImageMagick, to crop and resize images ..."
   sudo aptitude install -y imagemagick
 
 fancy_echo "Installing libraries for common gem dependencies ..."
-  sudo aptitude install -y libxslt1-dev libcurl4-openssl-dev libksba8 libksba-dev libqtwebkit-dev libreadline-dev libpq-dev
+  sudo aptitude install -y libxslt1-dev libcurl4-openssl-dev libksba8 libksba-dev libqt5webkit5-dev libreadline-dev libpq-dev
 
 fancy_echo "Installing watch, to execute a program periodically and show the output ..."
   sudo aptitude install -y watch
@@ -110,7 +110,7 @@ fancy_echo "Installing Ruby dependencies ..."
 ## Ruby environment
 RUBY_VERSION="3.1.0"
 
-fancy_echo "Preveting gem system from installing documentation ..."
+fancy_echo "Preventing gem system from installing documentation ..."
   echo 'gem: --no-ri --no-doc' >> ~/.gemrc
 
 fancy_echo "Installing Ruby $RUBY_VERSION ..."

@@ -108,7 +108,7 @@ fancy_echo "Installing dependencies ..."
   install "cmake"
 
 ## Ruby environment
-RUBY_VERSION="2.5.1"
+RUBY_VERSION="3.1.0"
 
 fancy_echo "Preveting gem system from installing documentation ..."
   echo 'gem: --no-ri --no-doc' >> $HOME/.gemrc
