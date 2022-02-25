@@ -81,10 +81,10 @@ fancy_echo "Upgrading and linking OpenSSL ..."
 #export CC=gcc-4.2
 
 ## Ruby environment
-fancy_echo "Installing Ruby 2.5.1 ..."
+fancy_echo "Installing Ruby 3.1.1 ..."
   rbenv install 3.1.1
 
-fancy_echo "Setting Ruby 2.5.1 as global default Ruby ..."
+fancy_echo "Setting Ruby 3.1.1 as global default Ruby ..."
   rbenv global 3.1.1
   rbenv rehash
 
