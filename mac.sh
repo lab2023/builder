@@ -82,10 +82,10 @@ fancy_echo "Upgrading and linking OpenSSL ..."
 
 ## Ruby environment
 fancy_echo "Installing Ruby 2.5.1 ..."
-  rbenv install 2.5.1
+  rbenv install 3.1.1
 
 fancy_echo "Setting Ruby 2.5.1 as global default Ruby ..."
-  rbenv global 2.5.1
+  rbenv global 3.1.1
   rbenv rehash
 
 fancy_echo "Updating to latest Rubygems version ..."
