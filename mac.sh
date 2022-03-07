@@ -28,7 +28,7 @@ fi
 
 ## Homebrew
 fancy_echo "Installing Homebrew, a good OS X package manager ..."
-  ruby <(curl -fsS https://raw.githubusercontent.com/Homebrew/install/master/install)
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   brew update
 
 if ! grep -qs "recommended by brew doctor" ~/.zshrc; then
@@ -40,7 +40,7 @@ fi
 
 ## Oh my zsh
 fancy_echo "Installing Oh my zsh, community-driven framework for managing your ZSH configuration ..."
-  curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ## Redis
 fancy_echo "Installing Redis, a good key-value database ..."
@@ -67,7 +67,7 @@ fancy_echo "Installing rbenv, to change Ruby versions ..."
       eval "$(rbenv init -)"
   fi
 
-#  source ~/.zshrc
+  source ~/.zshrc
 
 # fancy_echo "Installing rbenv-gem-rehash so the shell automatically picks up binaries after installing gems with binaries..."
 #  brew install rbenv-gem-rehash
@@ -89,7 +89,7 @@ fancy_echo "Setting Ruby 2.5.1 as global default Ruby ..."
   rbenv rehash
 
 fancy_echo "Updating to latest Rubygems version ..."
-  gem update --system
+  sudo gem update --system
 
 fancy_echo "Installing critical Ruby gems for Rails development ..."
   gem install rails
